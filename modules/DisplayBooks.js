@@ -1,5 +1,5 @@
 const bookContainer = document.querySelector('.book-container');
- let displayBook = (books) =>{
+const displayBook = (books) => {
   books.forEach((book) => {
     const bookDiv = document.createElement('tr');
     bookDiv.className = 'book';
@@ -13,5 +13,5 @@ const bookContainer = document.querySelector('.book-container');
     bookDiv.appendChild(removeBtn);
     bookContainer.appendChild(bookDiv);
   });
-}
+};
 export default displayBook;
