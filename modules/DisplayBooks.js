@@ -1,6 +1,6 @@
 
 const bookContainer = document.querySelector('.book-container');
-export function displayBook(books) {
+export default function displayBook(books) {
     books.forEach((book) => {
       const bookDiv = document.createElement('tr');
       bookDiv.className = 'book';
