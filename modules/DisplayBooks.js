@@ -1,5 +1,5 @@
 const bookContainer = document.querySelector('.book-container');
-export default function displayBook(books) {
+ let displayBook = (books) =>{
   books.forEach((book) => {
     const bookDiv = document.createElement('tr');
     bookDiv.className = 'book';
@@ -14,3 +14,4 @@ export default function displayBook(books) {
     bookContainer.appendChild(bookDiv);
   });
 }
+export default displayBook;
