@@ -3,6 +3,7 @@ import displayBook from './modules/DisplayBooks.js';
 import addBook from './modules/AddBook.js';
 import removeBook from './modules/RemoveBook.js';
 import displaySections from './modules/DisplaySections.js';
+import {DateTime} from "./node_modules/luxon/src/luxon.js"
 
 const bk = new Books();
 
@@ -18,10 +19,9 @@ const main = () => {
   displayBook(books);
   removeBook(bk);
 
-  const theDate = new Date().toUTCString();
 
   const dateDiv = document.querySelector('.date');
-  dateDiv.innerHTML = theDate;
+  dateDiv.innerHTML = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
   displaySections();
 };
 
